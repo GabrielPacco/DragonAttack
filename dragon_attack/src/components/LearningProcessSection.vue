@@ -41,10 +41,10 @@ export default {
         { 
           title: 'Detección de Necesidades',
           description: 'Identificación de las necesidades cognitivas y físicas de los niños, cruciales para diseñar una experiencia interactiva.',
-          image: require('@/assets/logo.png'),
-          pdfLink: '/path/to/deteccion_necesidades.pdf'
+          image: require('@/assets/identificar_necesidades.webp'),
+          pdfLink: 'https://drive.google.com/file/d/1xj9_Avxjcx9i_9bErIlU6ELIwwEhXFnY/view?usp=sharing'
         },
-        { 
+        {   
           title: 'Diseño del Juego',
           description: 'Se desarrollan los elementos visuales y la mecánica de juego que combina actividad física y desafíos matemáticos.',
           image: require('@/assets/logo.png'),
@@ -89,9 +89,9 @@ export default {
   padding: 3em 2em;
   text-align: center;
   background-color: #81c784; /* Fondo verde claro */
-  color: #ffffff;
+  color: #040404;
 }
-
+  
 .learning-process-section h2 {
   font-size: 2.5em;
   color: #ff7043;
