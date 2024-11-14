@@ -42,7 +42,7 @@ export default {
           title: 'Detección de Necesidades',
           description: 'Identificación de las necesidades cognitivas y físicas de los niños, cruciales para diseñar una experiencia interactiva.',
           image: require('@/assets/identificar_necesidades.webp'),
-          pdfLink: 'https://drive.google.com/file/d/1xj9_Avxjcx9i_9bErIlU6ELIwwEhXFnY/view?usp=sharing'
+          pdfLink: 'https://drive.google.com/file/d/10f-hjQwpGSLh1-MXHy2DC19RAjgzts22/view?usp=sharing'
         },
         {   
           title: 'Diseño del Juego',
