@@ -23,7 +23,7 @@ export default {
         { name: 'Gabriel P.', role: 'Desarrollador', photo: require('@/assets/gabriel.jpg') },
         { name: 'Edson B.', role: 'Diseñador', photo: require('@/assets/edson.jpeg') },
         { name: 'Jorge T.', role: 'Desarrollador', photo: require('@/assets/edson.jpeg') },
-        { name: 'Rhett O.', role: 'Diseñadora', photo: require('@/assets/edson.jpeg') },
+        { name: 'Katherine B.', role: 'Diseñadora', photo: require('@/assets/edson.jpeg') },
       ],
     };
   },

@@ -6,6 +6,8 @@ import AboutDragon from '../components/AboutDragon.vue';
 import VideosSection from '../components/VideosSection.vue';
 import ProcessSection from '../components/ProcessSection.vue';
 import TeamSection from '../components/TeamSection.vue';
+import TeamSectionMath from '../components/TeamSectionMath.vue'; // Importa el nuevo componente
+
 
 const routes = [
   { path: '/', redirect: '/dragon-attack' }, // Redirige temporalmente a AboutDragon para probar
@@ -15,6 +17,7 @@ const routes = [
   { path: '/videos', component: VideosSection },
   { path: '/process', component: ProcessSection },
   { path: '/team', component: TeamSection },
+  { path: '/math-adventure/team', component: TeamSectionMath }, // Ruta para la nueva sección
 ];
 
 const router = createRouter({

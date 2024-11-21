@@ -42,18 +42,18 @@ export default {
           title: 'Detección de Necesidades',
           description: 'Identificación de las necesidades cognitivas y físicas de los niños, cruciales para diseñar una experiencia interactiva.',
           image: require('@/assets/identificar_necesidades.webp'),
-          pdfLink: 'https://drive.google.com/file/d/10f-hjQwpGSLh1-MXHy2DC19RAjgzts22/view?usp=sharing'
+          pdfLink: 'https://drive.google.com/file/d/1xYUzyqyfKcxn6DH1srKPYIsBDyXSxm9g/view?usp=sharing'
         },
         {   
           title: 'Diseño del Juego',
           description: 'Se desarrollan los elementos visuales y la mecánica de juego que combina actividad física y desafíos matemáticos.',
-          image: require('@/assets/logo.png'),
-          pdfLink: '/path/to/diseno_juego.pdf'
+          image: require('@/assets/identificar_necesidades.webp'),
+          pdfLink: 'https://drive.google.com/file/d/1CtBktNql4-Cq7BdU353HpqCvwn3KVQbq/view?usp=sharing'
         },
         { 
           title: 'Pruebas de Usabilidad',
           description: 'Realización de pruebas con niños para asegurar que el juego sea atractivo, educativo y fácil de entender.',
-          image: require('@/assets/logo.png'),
+          image: require('@/assets/identificar_necesidades.webp'),
           pdfLink: '/path/to/pruebas_usabilidad.pdf'
         }
       ],
@@ -88,10 +88,12 @@ export default {
 .learning-process-section {
   padding: 3em 2em;
   text-align: center;
-  background-color: #81c784; /* Fondo verde claro */
+  background: linear-gradient(to bottom, #4dd8aa, #66c75d); /* Efecto degradado */
   color: #040404;
+  border-radius: 10px; /* Opcional: bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para un efecto más definido */
 }
-  
+
 .learning-process-section h2 {
   font-size: 2.5em;
   color: #ff7043;
@@ -128,7 +130,7 @@ export default {
 
 .step-image {
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   border-radius: 8px;
   margin-bottom: 1em;
   border: 3px solid #4db6ac;

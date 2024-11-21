@@ -10,7 +10,7 @@
       <LearningProcessSection />
     </section>
     <section id="team">
-      <TeamSection />
+      <TeamSectionMath />
     </section>
   </div>
 </template>
@@ -19,7 +19,7 @@
 import OverviewSection from './OverviewSection.vue';
 import DemosSection from './DemosSection.vue';
 import LearningProcessSection from './LearningProcessSection.vue';
-import TeamSection from './TeamSection.vue';
+import TeamSectionMath from './TeamSectionMath.vue';
 
 export default {
   name: 'MathAdventureHome',
@@ -27,7 +27,7 @@ export default {
     OverviewSection,
     DemosSection,
     LearningProcessSection,
-    TeamSection,
+    TeamSectionMath,
   },
 };
 </script>
