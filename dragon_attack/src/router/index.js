@@ -10,7 +10,7 @@ import TeamSectionMath from '../components/TeamSectionMath.vue'; // Importa el n
 
 
 const routes = [
-  { path: '/', redirect: '/dragon-attack' }, // Redirige temporalmente a AboutDragon para probar
+  { path: '/', redirect: '/math-adventure' }, // Redirige temporalmente a AboutDragon para probar
   { path: '/dragon-attack', name: 'DragonAttackHome', component: DragonAttackHome },
   { path: '/math-adventure', name: 'MathAdventureHome', component: MathAdventureHome },
   { path: '/about', component: AboutDragon },
