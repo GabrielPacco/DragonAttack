@@ -50,7 +50,7 @@ export default {
           title: 'Prototipo de Baja Fidelidad',
           description: 'Se crearon representaciones simples y rápidas del diseño del juego para evaluar la combinación de actividad física y desafíos matemáticos. Este prototipo permitió probar la idea con usuarios reales y obtener retroalimentación temprana sobre las mecánicas básicas del juego.',
           image: require('@/assets/baja_fidelidad.png'),
-          pdfLink: 'https://drive.google.com/file/d/1IY7Yzedz88e_WJr76p2vHFI0vgfDSCsG/view?usp=sharing'
+          pdfLink: 'https://drive.google.com/file/d/1Ki0WC1VmlwQApjwNE4tMcBaQ_w6nZxQQ/view?usp=sharing'
         },
         { 
           title: 'Pruebas de Usabilidad',
