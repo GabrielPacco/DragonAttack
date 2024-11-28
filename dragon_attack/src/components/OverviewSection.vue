@@ -36,23 +36,25 @@ export default {
 <style scoped>
 .math-overview {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten */
+  justify-content: center; /* Centra los elementos en pantallas pequeñas */
   align-items: center;
   background: linear-gradient(to bottom right, #81c784, #64b5f6);
   color: #ffffff;
-  padding: 3em;
+  padding: 2em;
   box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: auto; /* Ajusta automáticamente la altura */
 }
 
 .overview-content {
   max-width: 50%;
   text-align: center;
+  padding: 1em;
 }
 
 .overview-content h1 {
-  font-size: 4em;
+  font-size: 3rem;
   color: #ff7043;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   margin-bottom: 0.5em;
@@ -60,29 +62,29 @@ export default {
 }
 
 .overview-content h2 {
-  font-size: 2.5em;
+  font-size: 2rem;
   color: #ffcc80;
   margin-bottom: 1em;
   text-shadow: 1px 1px #ff7043;
 }
 
 .overview-content p {
-  font-size: 1.5em;
-  line-height: 1.8;
+  font-size: 1.2rem;
+  line-height: 1.5;
   color: #ffffff;
   font-family: Arial, sans-serif;
-  margin-bottom: 1.2em;
+  margin-bottom: 1em;
 }
 
 .explore-more {
   margin-top: 1em;
   background-color: #ff7043;
   color: #ffffff;
-  padding: 1em 2em;
+  padding: 0.8em 1.5em;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 1.5em;
+  font-size: 1.2rem;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   text-shadow: 1px 1px #000000;
   transition: background-color 0.3s ease;
@@ -94,14 +96,55 @@ export default {
 
 .overview-image {
   max-width: 40%;
+  width: 100%; /* Se ajusta al ancho disponible */
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1em;
 }
 
 .overview-image img {
   width: 100%;
+  max-width: 400px;
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .math-overview {
+    flex-direction: column; /* Coloca los elementos uno debajo del otro */
+    padding: 1em;
+  }
+
+  .overview-content {
+    max-width: 90%; /* Ajusta el ancho en pantallas pequeñas */
+  }
+
+  .overview-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .overview-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .overview-content p {
+    font-size: 1rem;
+  }
+
+  .explore-more {
+    font-size: 1rem;
+    padding: 0.6em 1em;
+  }
+
+  .overview-image {
+    max-width: 90%;
+    margin-top: 1em;
+  }
+
+  .overview-image img {
+    max-width: 100%;
+  }
 }
 </style>
