@@ -25,7 +25,7 @@ export default {
   name: 'AboutDragon',
   methods: {
     goToVideos() {
-      this.$router.push('/videos-section');
+      this.$router.push('/videos');
     }
   }
 };

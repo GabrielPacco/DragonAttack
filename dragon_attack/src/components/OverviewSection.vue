@@ -27,7 +27,7 @@ export default {
   name: 'OverviewSection',
   methods: {
     goToGameFeatures() {
-      this.$router.push('/videos');
+      this.$router.push('/processmath');
     },
   },
 };
@@ -36,15 +36,15 @@ export default {
 <style scoped>
 .math-overview {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se ajusten */
-  justify-content: center; /* Centra los elementos en pantallas pequeñas */
+  flex-wrap: wrap; 
+  justify-content: space-between;
   align-items: center;
   background: linear-gradient(to bottom right, #81c784, #64b5f6);
   color: #ffffff;
+  width: 100vw;
+  height: 90vh;
   padding: 2em;
   box-sizing: border-box;
-  width: 100%;
-  height: auto; /* Ajusta automáticamente la altura */
 }
 
 .overview-content {

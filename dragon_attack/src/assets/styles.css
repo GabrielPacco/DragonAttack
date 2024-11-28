@@ -1,62 +1,6 @@
 /* src/assets/styles.css */
 
-/* Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0fff4;
-    color: #f8fcfc;
-  }
-  
-  h1, h2, h3 {
-    color: #2f4f4f;
-    font-weight: 600;
-  }
-  
-  a {
-    color: #006400;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Clases de utilidad */
-  .text-center {
-    text-align: center;
-  }
-  
-  .margin-top {
-    margin-top: 1em;
-  }
-  
-  .margin-bottom {
-    margin-bottom: 1em;
-  }
-  
-  /* Otros estilos comunes que se repiten en varios componentes */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1em;
-  }
-  
-  .button {
-    background-color: #006400;
-    color: white;
-    padding: 0.5em 1em;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #004d33;
-  }
-  
-  /* styles.css o en App.vue */
+/* Reinicio de estilos globales */
 * {
   margin: 0;
   padding: 0;
@@ -68,5 +12,63 @@ html, body, #app {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+  overflow-x: hidden; /* Evita desplazamiento horizontal */
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #edf5ec; /* Fondo oscuro por defecto */
+  color: #f8fcfc; /* Color de texto */
+  margin: 0; /* Elimina los márgenes */
+  padding: 0; /* Elimina los paddings */
+}
+
+h1, h2, h3 {
+  color: #2f4f4f;
+  font-weight: 600;
+}
+
+a {
+  color: #006400;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Clases de utilidad */
+.text-center {
+  text-align: center;
+}
+
+.margin-top {
+  margin-top: 1em;
+}
+
+.margin-bottom {
+  margin-bottom: 1em;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 100vw; /* Usa todo el ancho disponible */
+  margin: 0; /* Elimina márgenes laterales */
+  padding: 0; /* Elimina paddings internos */
+  box-sizing: border-box; /* Asegura el cálculo correcto del tamaño */
+}
+
+/* Botones */
+.button {
+  background-color: #006400;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #004d33;
 }

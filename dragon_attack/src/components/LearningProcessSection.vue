@@ -1,7 +1,7 @@
 <template>
   <section class="learning-process-section" id="learning-process">
     <div class="content-wrapper">
-      <h2>Proceso de Aprendizaje en MathAdventure</h2>
+      <h2>Proceso de Aprendizaje</h2>
       <p>Explora el aprendizaje interactivo y los conceptos detrás de MathAdventure.</p>
       
       <div class="carousel">
@@ -41,7 +41,7 @@ export default {
       currentSlide: 0,
       learningSteps: [
         { 
-          title: 'Detección de Necesidades',
+          title: 'Needfinding',
           description: 'Identificación de las necesidades cognitivas y físicas de los niños, cruciales para diseñar una experiencia interactiva.',
           image: require('@/assets/identificar_necesidades.webp'),
           pdfLink: 'https://drive.google.com/file/d/1xYUzyqyfKcxn6DH1srKPYIsBDyXSxm9g/view?usp=sharing'
@@ -49,8 +49,8 @@ export default {
         {
           title: 'Prototipo de Baja Fidelidad',
           description: 'Se crearon representaciones simples y rápidas del diseño del juego para evaluar la combinación de actividad física y desafíos matemáticos. Este prototipo permitió probar la idea con usuarios reales y obtener retroalimentación temprana sobre las mecánicas básicas del juego.',
-          image: require('@/assets/identificar_necesidades.webp'),
-          pdfLink: 'https://drive.google.com/file/d/1CtBktNql4-Cq7BdU353HpqCvwn3KVQbq/view?usp=sharing'
+          image: require('@/assets/baja_fidelidad.png'),
+          pdfLink: 'https://drive.google.com/file/d/1IY7Yzedz88e_WJr76p2vHFI0vgfDSCsG/view?usp=sharing'
         },
         { 
           title: 'Pruebas de Usabilidad',
