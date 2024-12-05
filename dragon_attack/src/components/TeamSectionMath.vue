@@ -20,10 +20,10 @@
     data() {
       return {
         teamMembers: [
-          { name: 'Gabriel P.', role: 'Desarrollador', photo: require('@/assets/gabriel.jpg') },
-          { name: 'Edson B.', role: 'Diseñador', photo: require('@/assets/edson.jpeg') },
-          { name: 'Jorge T.', role: 'Desarrollador', photo: require('@/assets/edson.jpeg') },
-          { name: 'Katherine B.', role: 'Diseñadora', photo: require('@/assets/edson.jpeg') },
+          { name: 'Gabriel Pacco.', role: 'Desarrollador', photo: require('@/assets/gabriel.jpg') },
+          { name: 'Edson Béjar.', role: 'Diseñador', photo: require('@/assets/edson.jpeg') },
+          { name: 'Jorge Tito.', role: 'Desarrollador', photo: require('@/assets/edson.jpeg') },
+          { name: 'Katherine Béjar.', role: 'Diseñadora', photo: require('@/assets/edson.jpeg') },
         ],
       };
     },
@@ -35,21 +35,25 @@
     padding: 3em 2em;
     text-align: center;
     color: #333333;
-    background: linear-gradient(to bottom, #8ecae6, #42d49c); /* Colores brillantes para MathAdventure */
+    background: linear-gradient(to bottom right, #0e0e0e, #3d3d3c); /* Fondo original */
   }
   
+  /* Títulos destacados */
   .team-section h2 {
     font-size: 2.5em;
-    color: #ff6d00; /* Color vibrante para destacar */
+    color: #FF80AB; /* Rosa Vivo para destacar */
     margin-bottom: 0.5em;
+    text-shadow: 2px 2px #FFF59D; /* Sombra Amarillo Pastel */
   }
   
+  /* Descripción de la sección */
   .team-section p {
     font-size: 1.2em;
-    color: #ffffff;
+    color: #ffffff; /* Texto claro */
     margin-bottom: 2em;
   }
   
+  /* Contenedor de miembros del equipo */
   .team-members {
     display: flex;
     justify-content: center;
@@ -57,21 +61,23 @@
     flex-wrap: wrap;
   }
   
+  /* Estilo de cada miembro */
   .team-member {
     text-align: center;
     max-width: 150px;
-    background-color: #ffffff; /* Fondo blanco para contraste */
+    background-color: #2c2f30; /* Fondo Turquesa para contraste */
     padding: 1em;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px; /* Bordes más amigables */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
   }
   
+  /* Foto del miembro */
   .member-photo {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(34, 195, 160, 0.5); /* Sombra colorida */
+    box-shadow: 0 0 10px rgba(255, 128, 171, 0.5); /* Sombra Rosa Vivo */
     margin: 0 auto 1em;
   }
   
@@ -81,15 +87,18 @@
     object-fit: cover;
   }
   
+  /* Nombre del miembro */
   .team-member h3 {
     font-size: 1.1em;
-    color: #ff6d00; /* Color brillante */
+    color: #FF7043; /* Naranja Vivo */
     margin-bottom: 0.2em;
   }
   
+  /* Rol del miembro */
   .team-member .role {
     font-size: 1em;
-    color: #219ebc; /* Azul temático */
+    color: #FFD700; /* Amarillo Brillante */
   }
   </style>
+  
   

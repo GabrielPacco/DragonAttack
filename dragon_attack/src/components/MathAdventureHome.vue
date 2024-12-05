@@ -36,12 +36,13 @@ export default {
 .math-adventure-home {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 0; /* Elimina espacio entre los elementos hijos */
 }
 
 section {
-  padding: 1em;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  padding: 0em; /* Reduce el espacio interno */
+  border: 0px solid transparent; /* Borde transparente o ajustado */
+  border-radius: 4px; /* Ajusta el redondeo de las esquinas */
 }
 </style>
+

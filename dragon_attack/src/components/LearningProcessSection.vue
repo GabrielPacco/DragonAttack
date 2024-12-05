@@ -42,13 +42,13 @@ export default {
       learningSteps: [
         { 
           title: 'Needfinding',
-          description: 'Identificación de las necesidades cognitivas y físicas de los niños, cruciales para diseñar una experiencia interactiva.',
+          description: 'Identificación de las necesidades cognitivas de los niños, cruciales para diseñar una experiencia interactiva.',
           image: require('@/assets/identificar_necesidades.webp'),
           pdfLink: 'https://drive.google.com/file/d/1xYUzyqyfKcxn6DH1srKPYIsBDyXSxm9g/view?usp=sharing'
         },
         {
           title: 'Prototipo de Baja Fidelidad',
-          description: 'Se crearon representaciones simples y rápidas del diseño del juego para evaluar la combinación de actividad física y desafíos matemáticos. Este prototipo permitió probar la idea con usuarios reales y obtener retroalimentación temprana sobre las mecánicas básicas del juego.',
+          description: 'Se crearon representaciones simples y rápidas del diseño del juego para evaluar la combinación de mecánicas básicas y desafíos matemáticos.',
           image: require('@/assets/baja_fidelidad.png'),
           pdfLink: 'https://drive.google.com/file/d/1Ki0WC1VmlwQApjwNE4tMcBaQ_w6nZxQQ/view?usp=sharing'
         },
@@ -91,9 +91,9 @@ export default {
 .learning-process-section {
   padding: 2em 1em;
   text-align: center;
-  background: linear-gradient(to bottom, #4dd8aa, #66c75d);
+  background: linear-gradient(to bottom right, #0e0e0e, #3d3d3c);
   font-family: 'Poppins', sans-serif;
-  color: #2E2E2E; /* Mejor contraste */
+  color: #2E2E2E; /* Contraste adecuado para texto */
 }
 
 /* Content Wrapper */
@@ -105,16 +105,19 @@ export default {
 /* Title Styles */
 h2 {
   font-size: 2.4rem;
-  color: #ff7043;
+  color: #FF80AB; /* Rosa Vivo */
   margin-bottom: 0.5em;
   font-weight: 700;
+  text-shadow: 2px 2px #FFF59D; /* Sombra Amarillo Pastel */
 }
 
 /* Subtitle Styles */
 p {
-  font-size: 1rem;
-  margin-bottom: 1em;
+  font-size: 1.2rem;
   line-height: 1.5;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin-bottom: 1em;
 }
 
 /* Carousel */
@@ -129,17 +132,21 @@ p {
 .carousel-track-container {
   overflow: hidden;
   width: 100%;
+  padding: 0 1em; /* Margen interno para mantener el contenido centrado */
+  box-sizing: border-box;
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  margin: 0 1em; /* Margen horizontal para el contenido desplazable */
 }
 
 .carousel-slide {
-  min-width: 100%;
+  min-width: calc(100% - 2em); /* Ajusta el ancho para compensar los márgenes */
   text-align: center;
   padding: 1em 0;
+  margin: 0 1em; /* Espaciado entre las diapositivas */
 }
 
 /* Slide Title */
@@ -147,15 +154,16 @@ p {
   font-size: 1.5rem;
   margin-bottom: 0.5em;
   font-weight: 600;
-  color: #2E2E2E;
+  color: #FF7043; /* Naranja Vivo */
 }
 
 /* Slide Description */
 .carousel-slide p {
-  font-size: 0.9rem;
-  margin-bottom: 1em;
+  font-size: 1.2rem;
   line-height: 1.5;
-  color: #4a4a4a;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin-bottom: 1em;
 }
 
 /* Image Styles */
@@ -163,22 +171,24 @@ p {
   width: 100%;
   max-width: 400px;
   margin-bottom: 1em;
-  border-radius: 10px;
+  border-radius: 15px; /* Mayor redondeo para un estilo amigable */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
 /* Button Styles */
 .download-button {
-  background-color: #4db6ac;
+  background-color: #4DB6AC; /* Verde Pastel */
   color: white;
   padding: 0.5em 1em;
   font-size: 1rem;
-  border-radius: 5px;
+  border-radius: 10px; /* Bordes más suaves */
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .download-button:hover {
-  background-color: #26a69a;
+  background-color: #26C6DA; /* Azul Turquesa */
 }
 
 /* Navigation Buttons */
@@ -186,10 +196,16 @@ p {
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #ff7043;
+  color: #FF80AB; /* Rosa Vivo */
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
+.carousel-nav:hover {
+  color: #FFA500; /* Naranja claro */
+}
+
+/* Carousel Indicators */
 .carousel-indicators {
   display: flex;
   justify-content: center;
@@ -197,14 +213,49 @@ p {
 }
 
 .carousel-indicators span {
-  width: 8px;
-  height: 8px;
-  background-color: #ff7043;
+  width: 10px;
+  height: 10px;
+  background-color: #FF7043; /* Naranja Vivo */
   border-radius: 50%;
   margin: 0 5px;
+  transition: background-color 0.3s ease;
 }
 
 .carousel-indicators .active {
-  background-color: #ffffff;
+  background-color: #FFF59D; /* Amarillo Pastel */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .learning-process-section {
+    padding: 1em 0.5em;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-slide h3 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-slide p {
+    font-size: 0.8rem;
+  }
+
+  .step-image {
+    max-width: 300px;
+  }
+
+  .download-button {
+    font-size: 0.9rem;
+    padding: 0.4em 0.8em;
+  }
+
+  .carousel-indicators span {
+    width: 8px;
+    height: 8px;
+  }
 }
 </style>
+

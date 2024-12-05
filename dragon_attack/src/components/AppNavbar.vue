@@ -48,13 +48,17 @@ export default {
   justify-content: space-between;
   align-items: center;
   background-color: #272525;
-  padding: 1em;
+  padding: 0.5em; /* Ajusta el espacio interno */
+  margin: 0; /* Elimina márgenes externos */
+  box-sizing: border-box;
 }
 
 .section-links ul {
   display: flex;
   list-style: none;
   gap: 1em;
+  margin: 0; /* Elimina márgenes externos */
+  padding: 0; /* Elimina relleno interno */
 }
 
 .section-links a {
@@ -65,6 +69,8 @@ export default {
 .project-switch {
   display: flex;
   gap: 0.5em;
+  margin: 0; /* Elimina márgenes externos */
+  padding: 0; /* Asegura que no haya relleno interno */
 }
 
 .project-switch button {
@@ -80,3 +86,4 @@ export default {
   background-color: rgba(255, 255, 255, 0.4);
 }
 </style>
+

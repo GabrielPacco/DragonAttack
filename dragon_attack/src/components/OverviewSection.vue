@@ -4,10 +4,8 @@
       <h1>MathAdventure</h1>
       <h2>¡Aprende, Juega y Mejora Tus Habilidades!</h2>
       <p>
-        MathAdventure es una aventura educativa que mezcla desafíos matemáticos con acción física. 
-        Los jugadores esquivan obstáculos y resuelven problemas matemáticos en un entorno interactivo, 
-        ¡donde cada movimiento cuenta! Desarrolla rapidez mental, mejora tus reflejos y fortalece el 
-        equilibrio mientras te diviertes.
+        MathAdventure es una aventura educativa que mezcla desafíos matemáticos en un entorno interactivo. 
+        Los jugadores resuelven problemas matemáticos mientras desarrollan rapidez mental y mejoran sus habilidades de lógica y estrategia.
       </p>
       <p>
         Este juego desafía a los niños a medida que avanzan, aumentando la dificultad de los problemas y obstáculos. 
@@ -36,36 +34,36 @@ export default {
 <style scoped>
 .math-overview {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between;
+  justify-content: space-between; /* Distribuye los elementos correctamente */
   align-items: center;
-  background: linear-gradient(to bottom right, #81c784, #64b5f6);
+  background: linear-gradient(to bottom right, #0e0e0e, #3d3d3c);
   color: #ffffff;
-  width: 100vw;
-  height: 90vh;
-  padding: 2em;
-  box-sizing: border-box;
+  width: 99vw; /* Asegura el ancho completo */
+  height: 90vh; /* Ajusta la altura para ocupar el 90% del viewport */
+  padding: 10em; /* Uniforme para evitar espacios adicionales */
+  box-sizing: border-box; /* Garantiza el cálculo correcto del tamaño */
+  border-radius: 0px;
 }
 
 .overview-content {
-  max-width: 50%;
+  max-width: 50%; /* Ajusta el contenido a la mitad del contenedor */
   text-align: center;
-  padding: 1em;
+  padding: 2em; /* Espaciado interno uniforme */
 }
 
 .overview-content h1 {
   font-size: 3rem;
-  color: #ff7043;
+  color: #FF80AB; /* Rosa Vivo */
   font-family: 'Comic Sans MS', cursive, sans-serif;
   margin-bottom: 0.5em;
-  text-shadow: 2px 2px #ffcc00;
+  text-shadow: 2px 2px #FFF59D; /* Amarillo Pastel */
 }
 
 .overview-content h2 {
   font-size: 2rem;
-  color: #ffcc80;
+  color: #FFD700; /* Amarillo Brillante */
   margin-bottom: 1em;
-  text-shadow: 1px 1px #ff7043;
+  text-shadow: 1px 1px #FF80AB; /* Rosa Vivo */
 }
 
 .overview-content p {
@@ -78,8 +76,8 @@ export default {
 
 .explore-more {
   margin-top: 1em;
-  background-color: #ff7043;
-  color: #ffffff;
+  background-color: #FFD700; /* Amarillo Brillante */
+  color: #1E1E1E; /* Texto oscuro para contraste */
   padding: 0.8em 1.5em;
   border: none;
   border-radius: 10px;
@@ -91,34 +89,36 @@ export default {
 }
 
 .explore-more:hover {
-  background-color: #ffa500;
+  background-color: #FF80AB; /* Rosa Vivo para el hover */
 }
 
 .overview-image {
-  max-width: 40%;
-  width: 100%; /* Se ajusta al ancho disponible */
+  flex: 1; /* Asegura que la imagen tome el espacio restante */
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* Ajusta la posición de la imagen */
   align-items: center;
-  margin-top: 1em;
+  padding: 0; /* Sin padding adicional */
+  margin: 0; /* Sin márgenes adicionales */
 }
 
 .overview-image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  width: 100%; /* Ocupa el 90% del contenedor */
+  max-width: 500px;
+  border-radius: 35px; /* Bordes redondeados */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Sombra para efecto visual */
+  object-fit: cover; /* Ajusta la imagen al espacio disponible */
 }
 
 /* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
   .math-overview {
     flex-direction: column; /* Coloca los elementos uno debajo del otro */
-    padding: 1em;
+    padding: 1em; /* Ajusta el padding para pantallas pequeñas */
   }
 
   .overview-content {
-    max-width: 90%; /* Ajusta el ancho en pantallas pequeñas */
+    max-width: 90%; /* Ajusta el ancho del contenido */
+    padding: 1em; /* Reduce el espaciado interno */
   }
 
   .overview-content h1 {
@@ -139,12 +139,14 @@ export default {
   }
 
   .overview-image {
-    max-width: 90%;
-    margin-top: 1em;
+    max-width: 90%; /* Ajusta la imagen al ancho disponible */
+    margin-top: 1em; /* Agrega espacio entre contenido e imagen */
   }
 
   .overview-image img {
-    max-width: 100%;
+    max-width: 100%; /* Asegura que la imagen no desborde */
   }
 }
 </style>
+
+
