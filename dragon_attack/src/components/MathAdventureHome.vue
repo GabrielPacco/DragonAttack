@@ -3,6 +3,9 @@
     <section id="overview">
       <OverviewSection />
     </section>
+    <section id="overview">
+      <TimelineSteps />
+    </section>
     <section id="demos">
       <DemosSection />
     </section>
@@ -20,11 +23,13 @@ import OverviewSection from './OverviewSection.vue';
 import DemosSection from './DemosSection.vue';
 import LearningProcessSection from './LearningProcessSection.vue';
 import TeamSectionMath from './TeamSectionMath.vue';
+import TimelineSteps from './TimelineSteps.vue';
 
 export default {
   name: 'MathAdventureHome',
   components: {
     OverviewSection,
+    TimelineSteps,
     DemosSection,
     LearningProcessSection,
     TeamSectionMath,
