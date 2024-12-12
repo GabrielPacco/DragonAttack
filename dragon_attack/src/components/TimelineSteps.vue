@@ -230,6 +230,7 @@
     max-height: 300px; /* Altura expandida */
   }
   
+  
   .step-content h3 {
     font-size: 1.2em;
     margin: 0;
