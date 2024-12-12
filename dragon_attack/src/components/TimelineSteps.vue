@@ -185,6 +185,7 @@
     max-height: 300px; /* Altura expandida */
   }
   
+  
   .step-content h3 {
     font-size: 1.2em;
     margin: 0;
@@ -204,21 +205,23 @@
   
   /* Contenedor de videos */
   .video-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-    margin: 1em 0;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin: 1em 0;
+}
   
-  iframe {
-    width: 100%;
-    max-width: 250px;
-    height: 140px;
-    border: 2px solid #FF7043; /* Naranja Vivo */
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
+/* Dimensiones iniciales del iframe */
+iframe {
+  width: 100%;
+  max-width: 250px;
+  height: 140px;
+  border: 2px solid #FF7043; /* Naranja Vivo */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out; /* Animación suave */
+}
   
   /* Botón de acción */
   .view-button {
@@ -234,5 +237,11 @@
   .view-button:hover {
     background-color: #4DB6AC;
   }
+
+  /* Agrandar videos cuando la sección está activa */
+.timeline-step.active iframe {
+  max-width: 600px; /* Ancho aumentado */
+  height: 340px; /* Alto aumentado */
+}
   </style>
   
