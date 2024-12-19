@@ -35,17 +35,30 @@
             class="step-image"
           />
 
-          <!-- Videos en disposición horizontal -->
-          <div v-if="step.videos && selectedStep === index" class="video-container">
-            <iframe
+          <!-- Videos estilo actualizado con imágenes, texto y botón -->
+          <div v-if="step.videos && step.videos.length" class="video-section">
+            <div
               v-for="(video, vidIndex) in step.videos"
               :key="vidIndex"
-              :src="video"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+              class="video-thumbnail"
+            >
+              <!-- Imagen del video -->
+              <a :href="video.url" target="_blank" rel="noopener noreferrer">
+                <img
+                  :src="video.thumbnail"
+                  :alt="'Video ' + (vidIndex + 1)"
+                  class="video-image"
+                />
+              </a>
+
+              <!-- Texto dinámico (Necesidad 1, Necesidad 2, ...) -->
+              <p class="video-text">Necesidad {{ vidIndex + 1 }}</p>
+
+              <!-- Botón debajo de la imagen -->
+              <button @click="openVideo(video.url)" class="video-button">Ver</button>
+            </div>
           </div>
+
 
           <!-- Botón Ver Más -->
           <button
@@ -75,15 +88,34 @@
             description: "Identificación de necesidades para encontrar una solución creativa.",
             image: require("@/assets/idea_creation.jpeg"),
             videos: [
-              "https://www.youtube.com/embed/videoseries?list=PLUcGAU4fh-Fs_pvkq5E0Qi9-7FdxcjLNt",
-              "https://www.youtube.com/embed/videoseries?list=PLUcGAU4fh-Fs_pvkq5E0Qi9-7FdxcjLNt",
+              {
+                url: "https://www.youtube.com/watch?v=nYj9VY7cFaQ",
+                thumbnail: require("@/assets/video1.png"),
+              },
+              {
+                url: "https://www.youtube.com/watch?v=6II34wSqDM4",
+                thumbnail: require("@/assets/video2.png"),
+              },
+              {
+                url: "https://www.youtube.com/watch?v=example3",
+                thumbnail: require("@/assets/video3.png"),
+              },
+              {
+                url: "https://www.youtube.com/watch?v=example4",
+                thumbnail: require("@/assets/video4.png"),
+              },
+              {
+                url: "https://www.youtube.com/watch?v=example5",
+                thumbnail: require("@/assets/video5.png"),
+              },
             ],
           },
           {
             title: "Prototipo de Baja Fidelidad",
             description: "Dibujos y prototipos rápidos para visualizar el concepto inicial.",
-            image: require("@/assets/low_fidelity.png"),
-            link: "https://example.com/low-fidelity",
+            image: require("@/assets/collage1.png"),
+            extraImage: require("@/assets/collage1.png"),
+            link: 'https://drive.google.com/file/d/1Ki0WC1VmlwQApjwNE4tMcBaQ_w6nZxQQ/view?usp=sharing'
           },
           {
             title: "Pruebas de Usabilidad",
@@ -110,8 +142,6 @@
     },
   };
 </script>
-
-
   
   <style scoped>
   /* Sección principal */
@@ -288,8 +318,8 @@ iframe {
 
 /* Agrandar videos cuando la sección está activa */
 .timeline-step.active iframe {
-  max-width: 280px; /* Ancho aumentado */
-  height: 300px; /* Alto aumentado */
+  max-width: 250px; /* Ancho aumentado */
+  height: 125px; /* Alto aumentado */
 }
 
 /* Flechas entre pasos */
@@ -306,5 +336,60 @@ iframe {
 .timeline-step:last-child::after {
   content: ""; /* Sin flecha para el último paso */
 }
+
+/* Contenedor general de los videos */
+.video-section {
+  display: flex;
+  justify-content: center; /* Centra las miniaturas horizontalmente */
+  flex-wrap: wrap; /* Permite que se ajusten en varias filas si es necesario */
+  gap: 1em; /* Espaciado entre las miniaturas */
+  margin-top: 1em; /* Espaciado con el contenido anterior */
+}
+
+/* Contenedor individual de cada miniatura */
+.video-thumbnail {
+  text-align: center;
+  max-width: 150px; /* Ajusta el tamaño máximo de las miniaturas */
+  position: relative; /* Para posicionar el botón sobre la imagen */
+}
+
+/* Imagen de las miniaturas */
+.video-image {
+  width: 100%;
+  border-radius: 8px; /* Bordes redondeados */
+  border: 3px solid #4DB6AC; /* Borde verde pastel */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+  cursor: pointer; /* Cambia el cursor al pasar por la miniatura */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animación suave */
+}
+
+.video-image:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+/* Texto dinámico */
+.video-text {
+  font-size: 1em;
+  color: #FF7043; /* Naranja */
+  margin: 0.5em 0; /* Espaciado con la imagen y el botón */
+}
+
+/* Botón debajo de la imagen */
+.video-button {
+  padding: 0.5em 1em;
+  background-color: #4DB6AC; /* Verde pastel */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.video-button:hover {
+  background-color: #26C6DA; /* Azul turquesa */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
+}
+
   </style>
   
