@@ -36,13 +36,13 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1e1e1e; /* Fondo oscuro */
+  background: linear-gradient(to bottom, #000000, #1e1e1e); /* De negro a gris oscuro */
   color: #e0e0e0; /* Texto claro para contraste */
   width: 100vw;
   height: 90vh;
   padding: 2em;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 .about-content {

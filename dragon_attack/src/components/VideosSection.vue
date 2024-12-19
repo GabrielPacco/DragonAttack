@@ -62,7 +62,7 @@ export default {
   padding: 3em 2em;
   text-align: center;
   color: #e0e0e0;
-  background-color: #1e1e1e;
+  background: linear-gradient(to bottom, #000000, #1e1e1e); /* De negro a gris oscuro */
 }
 
 .videos-section h2 {

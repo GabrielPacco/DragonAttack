@@ -91,7 +91,7 @@ export default {
 .process-section {
   padding: 3em 2em;
   text-align: center;
-  background-color: #1e1e1e;
+  background: linear-gradient(to bottom, #000000, #1e1e1e); /* De negro a gris oscuro */
   color: #ffffff;
 }
 
