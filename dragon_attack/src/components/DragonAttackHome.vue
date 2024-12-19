@@ -34,6 +34,6 @@ export default {
 
 <style scoped>
 section {
-  padding: 2em 0;
+  padding: 0;
 }
 </style>

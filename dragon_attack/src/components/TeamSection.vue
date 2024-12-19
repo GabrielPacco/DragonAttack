@@ -20,10 +20,10 @@ export default {
   data() {
     return {
       teamMembers: [
-        { name: 'Gabriel P.', role: 'Desarrollador', photo: require('@/assets/gabriel.jpg') },
-        { name: 'Edson B.', role: 'Diseñador', photo: require('@/assets/edson.jpeg') },
-        { name: 'Jorge T.', role: 'Desarrollador', photo: require('@/assets/edson.jpeg') },
-        { name: 'Katherine B.', role: 'Diseñadora', photo: require('@/assets/edson.jpeg') },
+        { name: 'Gabriel Pacco', role: 'Desarrollador', photo: require('@/assets/gabriel.jpg') },
+        { name: 'Edson Béjar.', role: 'Diseñador', photo: require('@/assets/edson.jpeg') },
+        { name: 'Jorge Tito.', role: 'Desarrollador', photo: require('@/assets/edson.jpeg') },
+        { name: 'Katherine Béjar.', role: 'Diseñadora', photo: require('@/assets/edson.jpeg') },
       ],
     };
   },
@@ -35,7 +35,7 @@ export default {
   padding: 3em 2em;
   text-align: center;
   color: #e0e0e0;
-  background-color: #1e1e1e; /* Fondo oscuro para la temática del juego */
+  background: linear-gradient(to bottom, #000000, #1e1e1e); /* De negro a gris oscuro */
 }
 
 .team-section h2 {
