@@ -1,4 +1,4 @@
-<template>
+<template> 
   <section class="timeline-section" id="process-timeline">
     <h2>Proceso de Creación</h2>
     <p>Sigue el camino interactivo de nuestra evolución de la idea hasta la implementación.</p>
@@ -25,6 +25,15 @@
           <div class="step-text">
             <h3>{{ step.title }}</h3>
             <p>{{ step.description }}</p>
+
+            <!-- Problema y Objetivo (solo para el paso 1) -->
+            <div v-if="index === 0">
+              <h3>Problema</h3>
+              <p>{{ steps[0].extraContent.problem }}</p>
+              <hr />
+              <h3>Objetivo</h3>
+              <p>{{ steps[0].extraContent.objective }}</p>
+            </div>
           </div>
 
           <!-- Imagen -->
@@ -51,14 +60,13 @@
                 />
               </a>
 
-              <!-- Texto dinámico (Necesidad 1, Necesidad 2, ...) -->
-              <p class="video-text">Necesidad {{ vidIndex + 1 }}</p>
+              <!-- Texto dinámico (Entrevista 1, Entrevista 2, ...) -->
+              <p class="video-text">Entrevista {{ vidIndex + 1 }}</p>
 
               <!-- Botón debajo de la imagen -->
-              <button @click="openVideo(video.url)" class="video-button">Ver</button>
+              <button @click.stop="openVideo(video.url)" class="video-button">Ver</button>
             </div>
           </div>
-
 
           <!-- Botón Ver Más -->
           <button
@@ -71,77 +79,121 @@
         </div>
       </div>
     </div>
+
+    <!-- Sección Oculta -->
+    <section v-if="showHiddenSection" id="hidden-section">
+      <div class="hidden-content">
+        <h2>Sección Oculta</h2>
+        <p>Aquí se incluye el contenido adicional para explorar más detalles.</p>
+        <button @click="toggleHiddenSection" class="view-button">Cerrar</button>
+      </div>
+    </section>
   </section>
 </template>
 
- 
 
-  <script>
-  export default {
-    name: "TimelineSection",
-    data() {
-      return {
-        selectedStep: null,
-        steps: [
-          {
-            title: "Creación de la Idea",
-            description: "Identificación de necesidades para encontrar una solución creativa.",
-            image: require("@/assets/idea_creation.jpeg"),
-            videos: [
-              {
-                url: "https://www.youtube.com/watch?v=nYj9VY7cFaQ",
-                thumbnail: require("@/assets/video1.png"),
-              },
-              {
-                url: "https://www.youtube.com/watch?v=6II34wSqDM4",
-                thumbnail: require("@/assets/video2.png"),
-              },
-              {
-                url: "https://www.youtube.com/watch?v=example3",
-                thumbnail: require("@/assets/video3.png"),
-              },
-              {
-                url: "https://www.youtube.com/watch?v=example4",
-                thumbnail: require("@/assets/video4.png"),
-              },
-              {
-                url: "https://www.youtube.com/watch?v=example5",
-                thumbnail: require("@/assets/video5.png"),
-              },
-            ],
+
+<script>
+export default {
+  name: "TimelineSection",
+  data() {
+    return {
+      selectedStep: null,
+      showHiddenSection: false, // Control para mostrar la sección oculta 
+      steps: [
+        {
+          title: "Creación de la Idea",
+          description: "Identificación de necesidades para encontrar una solución creativa.",
+          image: require("@/assets/idea_creation.jpeg"),
+          extraContent: {
+            problem: "Los estudiantes de primaria tienen dificultades en matemáticas básicas debido a métodos tradicionales centrados en la memorización, lo que genera desmotivación y bajo rendimiento académico.",
+            objective: "Crear una solución educativa interactiva que refuerce la comprensión matemática con herramientas visuales y ejercicios adaptativos para mejorar motivación y progreso.",
           },
-          {
-            title: "Prototipo de Baja Fidelidad",
-            description: "Dibujos y prototipos rápidos para visualizar el concepto inicial.",
-            image: require("@/assets/collage1.png"),
-            extraImage: require("@/assets/collage1.png"),
-            link: 'https://drive.google.com/file/d/1Ki0WC1VmlwQApjwNE4tMcBaQ_w6nZxQQ/view?usp=sharing'
-          },
-          {
-            title: "Pruebas de Usabilidad",
-            description: "Validación inicial del prototipo con usuarios reales.",
-            image: require("@/assets/usability_testing.jpg"),
-            link: "https://example.com/usability-testing",
-          },
-          {
-            title: "Prototipo de Alta Fidelidad",
-            description: "Diseño completo y funcional que incorpora retroalimentación.",
-            image: require("@/assets/usability_testing.jpg"),
-            link: "https://example.com/high-fidelity",
-          },
-        ],
-      };
+          link: 'https://drive.google.com/file/d/1xYUzyqyfKcxn6DH1srKPYIsBDyXSxm9g/view?usp=sharing', // Enlace al documento
+        },
+
+        {
+          title: "Prototipo de Baja Fidelidad",
+          description: "Dibujos y prototipos rápidos para visualizar el concepto inicial.",
+          image: require("@/assets/collage1.png"),
+          videos: [
+            {
+              url: "https://www.youtube.com/watch?v=v5refXud4r0&list=PLUcGAU4fh-Fs_pvkq5E0Qi9-7FdxcjLNt&index=2",
+              thumbnail: require("@/assets/video1.png"),
+            },
+            {
+              url: "https://www.youtube.com/watch?v=nYj9VY7cFaQ&list=PLUcGAU4fh-Fs_pvkq5E0Qi9-7FdxcjLNt&index=1",
+              thumbnail: require("@/assets/video2.png"),
+            },
+            {
+              url: "https://www.youtube.com/watch?v=nEGSVi9LZ8Y&list=PLUcGAU4fh-Fs_pvkq5E0Qi9-7FdxcjLNt&index=4",
+              thumbnail: require("@/assets/video3.png"),
+            },
+            {
+              url: "https://www.youtube.com/watch?v=p8o6yoMiZ2c&list=PLUcGAU4fh-Fs_pvkq5E0Qi9-7FdxcjLNt&index=5",
+              thumbnail: require("@/assets/video4.png"),
+            },
+            {
+              url: "https://www.youtube.com/watch?v=4OMf7FUmstY&list=PLUcGAU4fh-Fs_pvkq5E0Qi9-7FdxcjLNt&index=3",
+              thumbnail: require("@/assets/video5.png"),
+            },
+          ],
+          link: 'https://drive.google.com/file/d/1Ki0WC1VmlwQApjwNE4tMcBaQ_w6nZxQQ/view?usp=sharing',
+        },
+        {
+    title: "Pruebas de Usabilidad",
+    description: "Validación del prototipo con usuarios reales.",
+    image: require("@/assets/prueba_usabilidad.png"),
+    videos: [
+            {
+              url: "https://www.youtube.com/watch?v=uy3hkfM-egQ&t=163s",
+              thumbnail: require("@/assets/persona_primaria.png"), // Reemplaza con la ruta real de la imagen
+            },
+            {
+              url: "https://www.youtube.com/watch?v=2uQeJnLJGig",
+              thumbnail: require("@/assets/persona_secundaria.png"), // Reemplaza con la ruta real de la imagen
+            },
+            {
+              url: "https://www.youtube.com/watch?v=L0ymPBWr19k&t=362s",
+              thumbnail: require("@/assets/persona_terciaria.png"), // Reemplaza con la ruta real de la imagen
+            },
+            {
+              url: "https://www.youtube.com/watch?v=AJ9RJjZHk3Q",
+              thumbnail: require("@/assets/antipersona.png"), // Reemplaza con la ruta real de la imagen
+            },
+          ],
+          link: "https://www.canva.com/design/DAGZDMU3r0o/4g2Sfaw-nZpddcyYIQioUg/edit",
+        },
+        {
+          title: "Prototipo de Alta Fidelidad",
+          description: "Diseño completo y funcional que incorpora retroalimentación.",
+          image: require("@/assets/usability_testing.jpg"),
+          link: "https://example.com/high-fidelity",
+        },
+      ],
+    };
+  },
+  methods: {
+    toggleStep(index) {
+      this.selectedStep = this.selectedStep === index ? null : index;
     },
-    methods: {
-      toggleStep(index) {
-        this.selectedStep = this.selectedStep === index ? null : index;
-      },
-      openLink(link) {
-        window.open(link, "_blank");
-      },
+    openLink(link) {
+      window.open(link, "_blank"); // Abre el enlace en una nueva pestaña
     },
-  };
+    openVideo(url) {
+      if (url) {
+        window.open(url, "_blank"); // Abre el video en una nueva pestaña
+      } else {
+        console.error("No se encontró la URL del video");
+      }
+    },
+    toggleHiddenSection() {
+      this.showHiddenSection = !this.showHiddenSection;
+    },
+  },
+};
 </script>
+
   
   <style scoped>
   /* Sección principal */
@@ -181,13 +233,42 @@
   gap: 1em;
   width: auto;
   padding: 1em;
-  background-color:#dae7ff; /* Naranja Pastel */
+  background-color: #dae7ff; /* Naranja Pastel */
   color: #333333;
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   position: relative; /* Necesario para la flecha */
   transition: transform 0.3s, box-shadow 0.3s;
-} 
+}
+
+/* Ajustes para limitar el ancho del texto */
+.timeline-step .step-text {
+  max-width: 40%; /* Limita el ancho del texto al 70% del contenedor */
+  text-align: justify; /* Justifica el texto para una mejor presentación */
+  margin: 0 auto; /* Centra el texto horizontalmente */
+  line-height: 1.5em; /* Mejora la legibilidad del texto */
+}
+/* Ajustar la posición del botón Ver Más */
+.timeline-step .step-content {
+  display: flex;
+  flex-direction: row; /* Asegura disposición vertical */
+  align-items: center; /* Centra los elementos horizontalmente */
+  gap: 1em; /* Espacio entre la imagen y el botón */
+}
+
+.timeline-step .step-image {
+  max-width: 300px; /* Reduce el tamaño de la imagen */
+  height: auto; /* Mantiene la proporción */
+  margin: 0 auto; /* Centra la imagen */
+}
+
+.view-button {
+  margin-top: 0.5em; /* Agrega un poco de espacio superior */
+  padding: 0.3em 0.8em; /* Tamaño del botón */
+  font-size: 0.8em; /* Ajusta el tamaño de fuente */
+  display: block; /* Asegura que el botón ocupe su propia fila */
+}
+
   
   .timeline-step:hover {
     transform: scale(1.05);
@@ -355,7 +436,7 @@ iframe {
 
 /* Imagen de las miniaturas */
 .video-image {
-  width: 100%;
+  width: 60%;
   border-radius: 8px; /* Bordes redondeados */
   border: 3px solid #4DB6AC; /* Borde verde pastel */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
@@ -391,5 +472,15 @@ iframe {
   transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
 }
 
-  </style>
+/* Sección Oculta */
+#hidden-section {
+  display: block;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  padding: 2em;
+  margin: 2em 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+</style>
   

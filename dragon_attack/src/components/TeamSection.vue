@@ -22,8 +22,8 @@ export default {
       teamMembers: [
         { name: 'Gabriel Pacco', role: 'Desarrollador', photo: require('@/assets/gabriel.jpg') },
         { name: 'Edson Béjar.', role: 'Diseñador', photo: require('@/assets/edson.jpeg') },
-        { name: 'Jorge Tito.', role: 'Desarrollador', photo: require('@/assets/edson.jpeg') },
-        { name: 'Katherine Béjar.', role: 'Diseñadora', photo: require('@/assets/edson.jpeg') },
+        { name: 'Jorge Tito.', role: 'Desarrollador', photo: require('@/assets/tito.jpg') },
+        { name: 'Katherine Béjar.', role: 'Diseñadora', photo: require('@/assets/k.jpg') },
       ],
     };
   },

@@ -37,13 +37,13 @@ export default {
           thumbnail: require('@/assets/intro_thumbnail.webp'),
         },
         {
-          title: 'Demostración: Resolver Problemas',
-          url: 'https://www.youtube.com/watch?v=example2',
+          title: 'Demostración: Suma con manzanas',
+          url: 'https://www.youtube.com/embed/2uVUUVLQtYs',
           thumbnail: require('@/assets/problems_thumbnail.jpg'),
         },
         {
-          title: 'Explorando el Mundo Virtual',
-          url: 'https://www.youtube.com/watch?v=example3',
+          title: 'Multiplicacion por 11',
+          url: 'https://www.youtube.com/embed/ImOSpurfqDE',
           thumbnail: require('@/assets/virtualworld_thumbnail.webp'),
         },
       ],

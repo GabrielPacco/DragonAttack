@@ -40,10 +40,16 @@ export default {
     return {
       currentSlide: 0,
       learningSteps: [
+        {
+          title: 'Visión General del Proyecto',
+          description: 'Documentación sobre la visión del proyecto, público objetivo y otros requerimientos básicos para garantizar el enfoque y la dirección adecuada.',
+          image: require('@/assets/identificar_necesidades.webp'),
+          pdfLink: 'https://drive.google.com/file/d/1CtBktNql4-Cq7BdU353HpqCvwn3KVQbq/view?usp=sharing'
+        },
         { 
           title: 'Needfinding',
           description: 'Identificación de las necesidades cognitivas de los niños, cruciales para diseñar una experiencia interactiva.',
-          image: require('@/assets/identificar_necesidades.webp'),
+          image: require('@/assets/needfinding.png'),
           pdfLink: 'https://drive.google.com/file/d/1xYUzyqyfKcxn6DH1srKPYIsBDyXSxm9g/view?usp=sharing'
         },
         {
@@ -51,12 +57,6 @@ export default {
           description: 'Se crearon representaciones simples y rápidas del diseño del juego para evaluar la combinación de mecánicas básicas y desafíos matemáticos.',
           image: require('@/assets/baja_fidelidad.png'),
           pdfLink: 'https://drive.google.com/file/d/1Ki0WC1VmlwQApjwNE4tMcBaQ_w6nZxQQ/view?usp=sharing'
-        },
-        { 
-          title: 'Pruebas de Usabilidad',
-          description: 'Realización de pruebas con niños para asegurar que el juego sea atractivo, educativo y fácil de entender.',
-          image: require('@/assets/identificar_necesidades.webp'),
-          pdfLink: '/path/to/pruebas_usabilidad.pdf'
         }
       ],
     };
